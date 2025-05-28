@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Technical Interview Study Plan - Cognida Inc.</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .week {
+            margin: 30px 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .week-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .day {
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .day:last-child {
+            border-bottom: none;
+        }
+        
+        .day-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .task-category {
+            margin: 15px 0;
+        }
+        
+        .category-title {
+            font-weight: 600;
+            color: #4a90e2;
+            margin-bottom: 8px;
+        }
+        
+        .task-list {
+            margin-left: 20px;
+        }
+        
+        .task-item {
+            margin: 8px 0;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-left: 4px solid #4a90e2;
+            border-radius: 4px;
+        }
+        
+        .leetcode-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #ff6b35;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .leetcode-link:hover {
+            background: #e55a2b;
+        }
+        
+        .study-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .study-link:hover {
+            background: #218838;
+        }
+        
+        .practice-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #6f42c1;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .practice-link:hover {
+            background: #5a32a3;
+        }
+        
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .print-btn {
+                position: static;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">📄 Print/Save as PDF</button>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Week 3 Study Plan</h1>
+            <p><strong>Advanced DSA + Full-Stack Drills + ML Projects</strong></p>
+            <p>📅 June 11-17, 2025</p>
+        </div>
+
+        <div class="week">
+            <div class="week-header">
+                WEEK 3: Advanced DSA + Full-Stack Drills + ML Projects
+            </div>
+            
+            <div class="day">
+                <div class="day-title">Day 15 (June 11)</div>
+                <div class="task-category">
+                    <div class="category-title">🔢 DSA: Advanced Sliding Window</div>
+                    <div class="task-item">
+                        Sliding Window Hard
+                        <a href="https://www.geeksforgeeks.org/window-sliding-technique/" class="study-link" target="_blank">Study</a>
+                        <a href="https://leetcode.com/tag/sliding-window/" class="practice-link" target="_blank">Practice</a>
+                        <a href="https://leetcode.com/problems/minimum-window-substring/" class="leetcode-link" target="_blank">#76</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">🤖 ML</div>
+                    <div class="task-item">
+                        SVM, PCA theory
+                        <a href="https://www.geeksforgeeks.org/support-vector-machine-algorithm/" class="study-link" target="_blank">SVM Study</a>
+                        <a href="https://www.geeksforgeeks.org/principal-component-analysis-pca/" class="study-link" target="_blank">PCA Study</a>
+                        <a href="https://scikit-learn.org/stable/modules/svm.html" class="practice-link" target="_blank">SVM Practice</a>
+                        <a href="https://scikit-learn.org/stable/modules/decomposition.html#pca" class="practice-link" target="_blank">PCA Practice</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">💻 Full-Stack</div>
+                    <div class="task-item">
+                        Build Movie Card Grid with React
+                        <a href="https://react.dev/learn" class="study-link" target="_blank">React Study</a>
+                        <a href="https://www.freecodecamp.org/learn/front-end-development-libraries/" class="practice-link" target="_blank">React Practice</a>
+                    </div>
+                    <div class="task-item">
+                        Write filter logic in JS
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter" class="study-link" target="_blank">JS Filter Study</a>
+                        <a href="https://www.w3schools.com/jsref/jsref_filter.asp" class="practice-link" target="_blank">JS Filter Practice</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 16 (June 12)</div>
+                <div class="task-category">
+                    <div class="category-title">🔢 DSA: Tries, Heaps</div>
+                    <div class="task-item">
+                        Implement prefix match + top K freq
+                        <a href="https://www.geeksforgeeks.org/trie-insert-and-search/" class="study-link" target="_blank">Trie Study</a>
+                        <a href="https://www.geeksforgeeks.org/heap-data-structure/" class="study-link" target="_blank">Heap Study</a>
+                        <a href="https://leetcode.com/tag/trie/" class="practice-link" target="_blank">Trie Practice</a>
+                        <a href="https://leetcode.com/tag/heap-priority-queue/" class="practice-link" target="_blank">Heap Practice</a>
+                        <a href="https://leetcode.com/problems/top-k-frequent-words/" class="leetcode-link" target="_blank">#692</a>
+                        <a href="https://leetcode.com/problems/implement-trie-prefix-tree/" class="leetcode-link" target="_blank">#208</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">🤖 AI</div>
+                    <div class="task-item">
+                        AI vs ML vs DL comparison chart
+                        <a href="https://www.geeksforgeeks.org/difference-between-artificial-intelligence-vs-machine-learning-vs-deep-learning/" class="study-link" target="_blank">AI/ML/DL Study</a>
+                        <a href="https://www.coursera.org/learn/machine-learning" class="practice-link" target="_blank">ML Practice</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">💻 Full-Stack</div>
+                    <div class="task-item">
+                        Add Routing with React Router
+                        <a href="https://reactrouter.com/en/main/start/tutorial" class="study-link" target="_blank">React Router Study</a>
+                        <a href="https://www.w3schools.com/react/react_router.asp" class="practice-link" target="_blank">React Router Practice</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 17 (June 13)</div>
+                <div class="task-category">
+                    <div class="category-title">🔢 DSA</div>
+                    <div class="task-item">
+                        Prefix Sum, Binary Search mix
+                        <a href="https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/" class="study-link" target="_blank">Prefix Sum Study</a>
+                        <a href="https://www.geeksforgeeks.org/binary-search/" class="study-link" target="_blank">Binary Search Study</a>
+                        <a href="https://leetcode.com/tag/prefix-sum/" class="practice-link" target="_blank">Prefix Sum Practice</a>
+                        <a href="https://leetcode.com/tag/binary-search/" class="practice-link" target="_blank">Binary Search Practice</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">🗄️ SQL</div>
+                    <div class="task-item">
+                        Indexes, Explain Plans
+                        <a href="https://www.w3schools.com/sql/sql_create_index.asp" class="study-link" target="_blank">SQL Indexes Study</a>
+                        <a href="https://sqlbolt.com/" class="practice-link" target="_blank">SQL Practice</a>
+                        <a href="https://www.hackerrank.com/domains/sql" class="practice-link" target="_blank">SQL HackerRank</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">📂 Project</div>
+                    <div class="task-item">Update schema diagram for Health Services app</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 18 (June 14)</div>
+                <div class="task-category">
+                    <div class="category-title">🏗️ System Design</div>
+                    <div class="task-item">
+                        URL Shortener/Rate Limiter
+                        <a href="https://www.geeksforgeeks.org/system-design-url-shortening-service/" class="study-link" target="_blank">URL Shortener Study</a>
+                        <a href="https://www.geeksforgeeks.org/rate-limiting-system-design/" class="study-link" target="_blank">Rate Limiter Study</a>
+                        <a href="https://github.com/donnemartin/system-design-primer" class="practice-link" target="_blank">System Design Practice</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">💻 Full-Stack</div>
+                    <div class="task-item">
+                        REST API with Spring Boot – CRUD for Patient records
+                        <a href="https://spring.io/guides/gs/rest-service/" class="study-link" target="_blank">Spring Boot REST Study</a>
+                        <a href="https://www.baeldung.com/spring-boot-crud-rest-service" class="practice-link" target="_blank">Spring Boot CRUD Practice</a>
+                    </div>
+                    <div class="task-item">Draw deployment diagram</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 19 (June 15)</div>
+                <div class="task-category">
+                    <div class="category-title">🔢 DSA: Dynamic Programming</div>
+                    <div class="task-item">
+                        Fibonacci, Coin Change
+                        <a href="https://www.geeksforgeeks.org/dynamic-programming/" class="study-link" target="_blank">DP Study</a>
+                        <a href="https://leetcode.com/tag/dynamic-programming/" class="practice-link" target="_blank">DP Practice</a>
+                        <a href="https://leetcode.com/problems/climbing-stairs/" class="leetcode-link" target="_blank">#70</a>
+                        <a href="https://leetcode.com/problems/coin-change/" class="leetcode-link" target="_blank">#322</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">🤖 ML</div>
+                    <div class="task-item">
+                        Pipeline building – preprocessing, train, evaluate
+                        <a href="https://scikit-learn.org/stable/modules/compose.html" class="study-link" target="_blank">ML Pipeline Study</a>
+                        <a href="https://www.kaggle.com/learn/intro-to-machine-learning" class="practice-link" target="_blank">ML Pipeline Practice</a>
+                    </div>
+                    <div class="task-item">Annotate pipeline steps in Jupyter</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 20 (June 16)</div>
+                <div class="task-category">
+                    <div class="category-title">🎯 Mock Interview</div>
+                    <div class="task-item">Tech Round Simulation – Java + SQL + Project Q&A</div>
+                    <div class="task-item">
+                        Review Java Streams + OOP patterns
+                        <a href="https://www.oracle.com/technical-resources/articles/java/ma14-java-se-8-streams.html" class="study-link" target="_blank">Java Streams Study</a>
+                        <a href="https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/" class="study-link" target="_blank">Java OOP Study</a>
+                        <a href="https://www.hackerrank.com/domains/java" class="practice-link" target="_blank">Java Practice</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 21 (June 17)</div>
+                <div class="task-category">
+                    <div class="category-title">📝 Review + Polish</div>
+                    <div class="task-item">GitHub – final README touchups</div>
+                    <div class="task-item">Prepare 3 project explainers</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white;">
+            <h3>🚀 Week 3 Complete!</h3>
+            <p>Advanced concepts mastered with comprehensive study and practice resources.</p>
+            <p><strong>Keep up the momentum! 💪</strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and interaction effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.leetcode-link, .study-link, .practice-link');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Add a small animation when clicking links
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

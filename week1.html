@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 1 - Technical Interview Study Plan - Cognida Inc.</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .week {
+            margin: 30px 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .week-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .day {
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .day:last-child {
+            border-bottom: none;
+        }
+        
+        .day-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .task-category {
+            margin: 15px 0;
+        }
+        
+        .category-title {
+            font-weight: 600;
+            color: #4a90e2;
+            margin-bottom: 8px;
+        }
+        
+        .task-list {
+            margin-left: 20px;
+        }
+        
+        .task-item {
+            margin: 8px 0;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-left: 4px solid #4a90e2;
+            border-radius: 4px;
+        }
+        
+        .leetcode-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #ff6b35;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .leetcode-link:hover {
+            background: #e55a2b;
+        }
+        
+        .study-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .study-link:hover {
+            background: #218838;
+        }
+        
+        .practice-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #6f42c1;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .practice-link:hover {
+            background: #5a32a3;
+        }
+        
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .print-btn {
+                position: static;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">📄 Print/Save as PDF</button>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Week 1 - Technical Interview Study Plan</h1>
+            <p><strong>For Cognida Inc. & Top Tech Companies</strong></p>
+            <p>📅 Start Date: May 28, 2025 | End Date: June 3, 2025</p>
+            <p>🎯 Focus: Foundations – DSA + Java + Project Review</p>
+        </div>
+
+        <div class="week">
+            <div class="week-header">
+                WEEK 1: Foundations – DSA + Java + Project Review
+            </div>
+            
+            <div class="day">
+                <div class="day-title">Day 1 (May 28)</div>
+                <div class="task-category">
+                    <div class="category-title">🔢 DSA: Arrays</div>
+                    <div class="task-item">
+                        Prefix Sum, Sliding Window
+                        <br>
+                        <a href="https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/" class="study-link" target="_blank">📚 Study</a>
+                        <a href="https://leetcode.com/tag/array/" class="practice-link" target="_blank">💻 Practice</a>
+                        <a href="https://leetcode.com/problems/subarray-sum-equals-k/" class="leetcode-link" target="_blank">#560</a>
+                        <a href="https://leetcode.com/problems/maximum-subarray/" class="leetcode-link" target="_blank">#53</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">☕ Java</div>
+                    <div class="task-item">
+                        OOP (Classes, Inheritance, Polymorphism) – code small Bank Account system
+                        <br>
+                        <a href="https://docs.oracle.com/javase/tutorial/java/concepts/" class="study-link" target="_blank">📚 Study</a>
+                        <a href="https://www.hackerrank.com/domains/java" class="practice-link" target="_blank">💻 Practice</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">📂 Project</div>
+                    <div class="task-item">Read AWS-based License Processing project architecture</div>
+                    <div class="task-item">Note 3 improvement areas in README</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 2 (May 29)</div>
+                <div class="task-category">
+                    <div class="category-title">🔢 DSA: Strings</div>
+                    <div class="task-item">
+                        Frequency Maps, Palindromes
+                        <br>
+                        <a href="https://www.geeksforgeeks.org/string-hashing/" class="study-link" target="_blank">📚 Study</a>
+                        <a href="https://leetcode.com/tag/string/" class="practice-link" target="_blank">💻 Practice</a>
+                        <a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" class="leetcode-link" target="_blank">#3</a>
+                        <a href="https://leetcode.com/problems/valid-anagram/" class="leetcode-link" target="_blank">#242</a>
+                        <a href="https://leetcode.com/problems/longest-palindrome/" class="leetcode-link" target="_blank">#409</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">☕ Java</div>
+                    <div class="task-item">
+                        Collections (HashMap, TreeSet) – implement Word Frequency Counter
+                        <br>
+                        <a href="https://docs.oracle.com/javase/tutorial/collections/" class="study-link" target="_blank">📚 Study</a>
+                        <a href="https://www.hackerrank.com/domains/java" class="practice-link" target="_blank">💻 Practice</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">📂 Project</div>
+                    <div class="task-item">Update GitHub Driver's License Project README</div>
+                    <div class="task-item">Add architecture diagram using draw.io</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 3 (May 30)</div>
+                <div class="task-category">
+                    <div class="category-title">🔢 DSA: Recursion</div>
+                    <div class="task-item">
+                        Factorial, Subsets, Permutations
+                        <br>
+                        <a href="https://www.geeksforgeeks.org/recursion/" class="study-link" target="_blank">📚 Study</a>
+                        <a href="https://leetcode.com/tag/recursion/" class="practice-link" target="_blank">💻 Practice</a>
+                        <a href="https://leetcode.com/problems/subsets/" class="leetcode-link" target="_blank">#78</a>
+                        <a href="https://leetcode.com/problems/permutations/" class="leetcode-link" target="_blank">#46</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">☕ Java</div>
+                    <div class="task-item">
+                        Exception Handling, File I/O – log errors to file in a sample task
+                        <br>
+                        <a href="https://docs.oracle.com/javase/tutorial/essential/exceptions/" class="study-link" target="_blank">📚 Study</a>
+                        <a href="https://www.hackerrank.com/domains/java" class="practice-link" target="_blank">💻 Practice</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">📂 Project</div>
+                    <div class="task-item">Document preprocessing steps in HCR project (normalization, etc.)</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 4 (May 31)</div>
+                <div class="task-category">
+                    <div class="category-title">🔢 DSA: Stack/Queue</div>
+                    <div class="task-item">
+                        Valid Parentheses, Monotonic Stack
+                        <br>
+                        <a href="https://www.geeksforgeeks.org/stack-data-structure/" class="study-link" target="_blank">📚 Study</a>
+                        <a href="https://leetcode.com/tag/stack/" class="practice-link" target="_blank">💻 Practice</a>
+                        <a href="https://leetcode.com/problems/valid-parentheses/" class="leetcode-link" target="_blank">#20</a>
+                        <a href="https://leetcode.com/problems/daily-temperatures/" class="leetcode-link" target="_blank">#739</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">☕ Java</div>
+                    <div class="task-item">
+                        Threading – Implement a threaded file downloader with shared resource
+                        <br>
+                        <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/" class="study-link" target="_blank">📚 Study</a>
+                        <a href="https://www.hackerrank.com/domains/java" class="practice-link" target="_blank">💻 Practice</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">📂 Project</div>
+                    <div class="task-item">Annotate code blocks in EasyLeave with inline comments</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 5 (June 1)</div>
+                <div class="task-category">
+                    <div class="category-title">🔢 DSA: Linked Lists</div>
+                    <div class="task-item">
+                        Reversal, Cycle Detection
+                        <br>
+                        <a href="https://www.geeksforgeeks.org/linked-list-set-1-introduction/" class="study-link" target="_blank">📚 Study</a>
+                        <a href="https://leetcode.com/tag/linked-list/" class="practice-link" target="_blank">💻 Practice</a>
+                        <a href="https://leetcode.com/problems/reverse-linked-list/" class="leetcode-link" target="_blank">#206</a>
+                        <a href="https://leetcode.com/problems/linked-list-cycle/" class="leetcode-link" target="_blank">#141</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">🗄️ SQL</div>
+                    <div class="task-item">
+                        SELECT, INNER JOIN, GROUP BY – Use LeetCode DB or Mode Analytics
+                        <br>
+                        <a href="https://www.w3schools.com/sql/" class="study-link" target="_blank">📚 Study</a>
+                        <a href="https://leetcode.com/problemset/database/" class="practice-link" target="_blank">💻 Practice</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">📂 Project</div>
+                    <div class="task-item">Clean up MongoDB schema in EasyLeave project</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 6 (June 2)</div>
+                <div class="task-category">
+                    <div class="category-title">🔢 DSA: Binary Search</div>
+                    <div class="task-item">
+                        Binary Search Variants
+                        <br>
+                        <a href="https://www.geeksforgeeks.org/binary-search/" class="study-link" target="_blank">📚 Study</a>
+                        <a href="https://leetcode.com/tag/binary-search/" class="practice-link" target="_blank">💻 Practice</a>
+                        <a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/" class="leetcode-link" target="_blank">#34</a>
+                        <a href="https://leetcode.com/problems/search-a-2d-matrix/" class="leetcode-link" target="_blank">#74</a>
+                        <a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/" class="leetcode-link" target="_blank">#153</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">☕ Java</div>
+                    <div class="task-item">
+                        Stream API + Lambdas – Process employee data list
+                        <br>
+                        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html" class="study-link" target="_blank">📚 Study</a>
+                        <a href="https://www.hackerrank.com/domains/java" class="practice-link" target="_blank">💻 Practice</a>
+                    </div>
+                    <div class="task-item">Add test cases using JUnit to your AWS project</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 7 (June 3)</div>
+                <div class="task-category">
+                    <div class="category-title">📝 Review Day</div>
+                    <div class="task-item">Mixed 3 DSA problems (Easy-Medium)</div>
+                    <div class="task-item">Revise Java OOP + Streams</div>
+                    <div class="task-item">Final polish of Driver's License GitHub project</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white;">
+            <h3>🚀 Week 1 Complete!</h3>
+            <p>Foundation building with DSA basics and Java fundamentals.</p>
+            <p><strong>Keep going! 💪</strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and interaction effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.leetcode-link, .study-link, .practice-link');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Add a small animation when clicking links
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

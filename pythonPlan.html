@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Study Guide - Technical Interview Prep</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #306998 0%, #FFD43B 100%);
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .section {
+            margin: 30px 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, #306998 0%, #FFD43B 100%);
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .topic {
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .topic:last-child {
+            border-bottom: none;
+        }
+        
+        .topic-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .content-item {
+            margin: 8px 0;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-left: 4px solid #306998;
+            border-radius: 4px;
+        }
+        
+        .study-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .study-link:hover {
+            background: #218838;
+        }
+        
+        .practice-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #6610f2;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .practice-link:hover {
+            background: #5a0cc9;
+        }
+        
+        .python-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #306998;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .python-link:hover {
+            background: #255a7a;
+        }
+        
+        .tutorial-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #fd7e14;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .tutorial-link:hover {
+            background: #e8650e;
+        }
+        
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #306998 0%, #FFD43B 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .print-btn {
+                position: static;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">📄 Print/Save as PDF</button>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🐍 Python Study Guide</h1>
+            <p><strong>Complete Python Resource for Technical Interviews</strong></p>
+            <p>📚 From Basics to Advanced Concepts</p>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                Python Fundamentals
+            </div>
+            
+            <div class="topic">
+                <div class="topic-title">Basic Syntax & Data Types</div>
+                <div class="content-item">
+                    Variables, Numbers, Strings, Booleans
+                    <a href="https://docs.python.org/3/tutorial/introduction.html" class="study-link" target="_blank">Official Tutorial</a>
+                    <a href="https://www.w3schools.com/python/python_datatypes.asp" class="tutorial-link" target="_blank">W3Schools</a>
+                    <a href="https://www.hackerrank.com/domains/python" class="practice-link" target="_blank">Practice</a>
+                </div>
+                <div class="content-item">
+                    Input/Output, Comments, Indentation
+                    <a href="https://realpython.com/python-input-output/" class="study-link" target="_blank">Real Python</a>
+                    <a href="https://www.codewars.com/kata/search/python" class="practice-link" target="_blank">CodeWars</a>
+                </div>
+            </div>
+
+            <div class="topic">
+                <div class="topic-title">Control Structures</div>
+                <div class="content-item">
+                    If/Elif/Else Statements
+                    <a href="https://docs.python.org/3/tutorial/controlflow.html" class="study-link" target="_blank">Python Docs</a>
+                    <a href="https://www.programiz.com/python-programming/if-elif-else" class="tutorial-link" target="_blank">Programiz</a>
+                    <a href="https://www.hackerrank.com/domains/python" class="practice-link" target="_blank">HackerRank</a>
+                </div>
+                <div class="content-item">
+                    Loops (for, while), Break, Continue
+                    <a href="https://realpython.com/python-for-loop/" class="study-link" target="_blank">For Loops</a>
+                    <a href="https://realpython.com/python-while-loop/" class="study-link" target="_blank">While Loops</a>
+                    <a href="https://leetcode.com/problemset/all/?topicSlugs=simulation" class="practice-link" target="_blank">LeetCode</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                Data Structures
+            </div>
+            
+            <div class="topic">
+                <div class="topic-title">Lists & Tuples</div>
+                <div class="content-item">
+                    List Operations, Slicing, List Comprehensions
+                    <a href="https://docs.python.org/3/tutorial/datastructures.html" class="study-link" target="_blank">Python Docs</a>
+                    <a href="https://realpython.com/python-lists-tuples/" class="tutorial-link" target="_blank">Real Python</a>
+                    <a href="https://www.hackerrank.com/domains/python" class="practice-link" target="_blank">Practice</a>
+                </div>
+                <div class="content-item">
+                    Tuple Packing/Unpacking, Immutability
+                    <a href="https://realpython.com/python-tuple/" class="study-link" target="_blank">Tuple Guide</a>
+                    <a href="https://www.programiz.com/python-programming/tuple" class="tutorial-link" target="_blank">Programiz</a>
+                </div>
+            </div>
+
+            <div class="topic">
+                <div class="topic-title">Dictionaries & Sets</div>
+                <div class="content-item">
+                    Dictionary Operations, Methods, Comprehensions
+                    <a href="https://realpython.com/python-dicts/" class="study-link" target="_blank">Dict Guide</a>
+                    <a href="https://www.w3schools.com/python/python_dictionaries.asp" class="tutorial-link" target="_blank">W3Schools</a>
+                    <a href="https://leetcode.com/tag/hash-table/" class="practice-link" target="_blank">Hash Table Problems</a>
+                </div>
+                <div class="content-item">
+                    Set Operations, Union, Intersection, Difference
+                    <a href="https://realpython.com/python-sets/" class="study-link" target="_blank">Sets Guide</a>
+                    <a href="https://www.programiz.com/python-programming/set" class="tutorial-link" target="_blank">Programiz Sets</a>
+                </div>
+            </div>
+
+            <div class="topic">
+                <div class="topic-title">Strings</div>
+                <div class="content-item">
+                    String Methods, Formatting, Regular Expressions
+                    <a href="https://realpython.com/python-strings/" class="study-link" target="_blank">String Guide</a>
+                    <a href="https://docs.python.org/3/library/re.html" class="python-link" target="_blank">Regex Docs</a>
+                    <a href="https://leetcode.com/tag/string/" class="practice-link" target="_blank">String Problems</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                Functions & OOP
+            </div>
+            
+            <div class="topic">
+                <div class="topic-title">Functions</div>
+                <div class="content-item">
+                    Function Definition, Parameters, Return Values
+                    <a href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions" class="study-link" target="_blank">Python Docs</a>
+                    <a href="https://realpython.com/defining-your-own-python-function/" class="tutorial-link" target="_blank">Real Python</a>
+                    <a href="https://www.hackerrank.com/domains/python" class="practice-link" target="_blank">Practice</a>
+                </div>
+                <div class="content-item">
+                    Lambda Functions, Map, Filter, Reduce
+                    <a href="https://realpython.com/python-lambda/" class="study-link" target="_blank">Lambda Guide</a>
+                    <a href="https://www.programiz.com/python-programming/anonymous-function" class="tutorial-link" target="_blank">Programiz</a>
+                </div>
+                <div class="content-item">
+                    Decorators, Generators, Iterators
+                    <a href="https://realpython.com/primer-on-python-decorators/" class="study-link" target="_blank">Decorators</a>
+                    <a href="https://realpython.com/introduction-to-python-generators/" class="study-link" target="_blank">Generators</a>
+                </div>
+            </div>
+
+            <div class="topic">
+                <div class="topic-title">Object-Oriented Programming</div>
+                <div class="content-item">
+                    Classes, Objects, Attributes, Methods
+                    <a href="https://docs.python.org/3/tutorial/classes.html" class="study-link" target="_blank">Python Classes</a>
+                    <a href="https://realpython.com/python3-object-oriented-programming/" class="tutorial-link" target="_blank">OOP Tutorial</a>
+                    <a href="https://www.hackerrank.com/domains/python" class="practice-link" target="_blank">OOP Practice</a>
+                </div>
+                <div class="content-item">
+                    Inheritance, Polymorphism, Encapsulation
+                    <a href="https://realpython.com/inheritance-composition-python/" class="study-link" target="_blank">Inheritance</a>
+                    <a href="https://www.programiz.com/python-programming/inheritance" class="tutorial-link" target="_blank">Programiz OOP</a>
+                </div>
+                <div class="content-item">
+                    Special Methods (__init__, __str__, __repr__)
+                    <a href="https://realpython.com/python-special-methods/" class="study-link" target="_blank">Special Methods</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                Advanced Python
+            </div>
+            
+            <div class="topic">
+                <div class="topic-title">File Handling & Exception Handling</div>
+                <div class="content-item">
+                    File I/O, Context Managers (with statement)
+                    <a href="https://realpython.com/python-file-handling/" class="study-link" target="_blank">File Handling</a>
+                    <a href="https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files" class="python-link" target="_blank">Python Docs</a>
+                    <a href="https://www.hackerrank.com/domains/python" class="practice-link" target="_blank">Practice</a>
+                </div>
+                <div class="content-item">
+                    Try/Except/Finally, Custom Exceptions
+                    <a href="https://realpython.com/python-exceptions-handling/" class="study-link" target="_blank">Exception Guide</a>
+                    <a href="https://docs.python.org/3/tutorial/errors.html" class="python-link" target="_blank">Error Handling</a>
+                </div>
+            </div>
+
+            <div class="topic">
+                <div class="topic-title">Modules & Packages</div>
+                <div class="content-item">
+                    Import Statements, Creating Modules
+                    <a href="https://docs.python.org/3/tutorial/modules.html" class="study-link" target="_blank">Modules Tutorial</a>
+                    <a href="https://realpython.com/python-modules-packages/" class="tutorial-link" target="_blank">Real Python</a>
+                </div>
+                <div class="content-item">
+                    Standard Library (os, sys, datetime, collections)
+                    <a href="https://docs.python.org/3/library/" class="python-link" target="_blank">Standard Library</a>
+                    <a href="https://realpython.com/python-collections-module/" class="study-link" target="_blank">Collections</a>
+                </div>
+            </div>
+
+            <div class="topic">
+                <div class="topic-title">Algorithms & Data Structures</div>
+                <div class="content-item">
+                    Sorting Algorithms, Binary Search
+                    <a href="https://realpython.com/sorting-algorithms-python/" class="study-link" target="_blank">Sorting Guide</a>
+                    <a href="https://leetcode.com/tag/sorting/" class="practice-link" target="_blank">Sorting Problems</a>
+                    <a href="https://leetcode.com/tag/binary-search/" class="practice-link" target="_blank">Binary Search</a>
+                </div>
+                <div class="content-item">
+                    Stack, Queue, Heap (using heapq)
+                    <a href="https://realpython.com/queue-in-python/" class="study-link" target="_blank">Queue Guide</a>
+                    <a href="https://docs.python.org/3/library/heapq.html" class="python-link" target="_blank">Heapq Docs</a>
+                    <a href="https://leetcode.com/tag/heap-priority-queue/" class="practice-link" target="_blank">Heap Problems</a>
+                </div>
+                <div class="content-item">
+                    Graph Algorithms (DFS, BFS)
+                    <a href="https://realpython.com/python-graph-traversal/" class="study-link" target="_blank">Graph Traversal</a>
+                    <a href="https://leetcode.com/tag/graph/" class="practice-link" target="_blank">Graph Problems</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                Python for Data Science & ML
+            </div>
+            
+            <div class="topic">
+                <div class="topic-title">NumPy & Pandas</div>
+                <div class="content-item">
+                    Arrays, Mathematical Operations
+                    <a href="https://numpy.org/learn/" class="study-link" target="_blank">NumPy Learn</a>
+                    <a href="https://www.w3schools.com/python/numpy/" class="tutorial-link" target="_blank">W3Schools NumPy</a>
+                    <a href="https://www.kaggle.com/learn/intro-to-programming" class="practice-link" target="_blank">Kaggle</a>
+                </div>
+                <div class="content-item">
+                    DataFrames, Data Manipulation
+                    <a href="https://pandas.pydata.org/docs/getting_started/index.html" class="study-link" target="_blank">Pandas Docs</a>
+                    <a href="https://www.w3schools.com/python/pandas/" class="tutorial-link" target="_blank">W3Schools Pandas</a>
+                    <a href="https://www.kaggle.com/learn/pandas" class="practice-link" target="_blank">Kaggle Pandas</a>
+                </div>
+            </div>
+
+            <div class="topic">
+                <div class="topic-title">Machine Learning Libraries</div>
+                <div class="content-item">
+                    Scikit-learn, Model Training & Evaluation
+                    <a href="https://scikit-learn.org/stable/getting_started.html" class="study-link" target="_blank">Scikit-learn</a>
+                    <a href="https://www.kaggle.com/learn/machine-learning" class="practice-link" target="_blank">ML Course</a>
+                </div>
+                <div class="content-item">
+                    Matplotlib, Seaborn for Visualization
+                    <a href="https://matplotlib.org/stable/tutorials/index.html" class="study-link" target="_blank">Matplotlib</a>
+                    <a href="https://seaborn.pydata.org/tutorial.html" class="tutorial-link" target="_blank">Seaborn</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                Practice Platforms
+            </div>
+            
+            <div class="topic">
+                <div class="topic-title">Coding Practice</div>
+                <div class="content-item">
+                    LeetCode Python Problems
+                    <a href="https://leetcode.com/problemset/all/" class="practice-link" target="_blank">All Problems</a>
+                    <a href="https://leetcode.com/explore/learn/" class="study-link" target="_blank">Learn Section</a>
+                </div>
+                <div class="content-item">
+                    HackerRank Python Domain
+                    <a href="https://www.hackerrank.com/domains/python" class="practice-link" target="_blank">Python Challenges</a>
+                </div>
+                <div class="content-item">
+                    CodeWars Python Kata
+                    <a href="https://www.codewars.com/kata/search/python" class="practice-link" target="_blank">Python Kata</a>
+                </div>
+                <div class="content-item">
+                    Coderbyte Python Challenges
+                    <a href="https://coderbyte.com/challenges" class="practice-link" target="_blank">Challenges</a>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: linear-gradient(135deg, #306998 0%, #FFD43B 100%); border-radius: 10px; color: white;">
+            <h3>🚀 Master Python for Technical Interviews!</h3>
+            <p>Use this comprehensive guide to strengthen your Python skills and ace your coding interviews.</p>
+            <p><strong>Happy Coding! 🐍</strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and interaction effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.study-link, .practice-link, .python-link, .tutorial-link');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Add a small animation when clicking links
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

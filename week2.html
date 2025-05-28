@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2: Trees, Graphs, SQL + ML Theory - Cognida Inc.</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .week {
+            margin: 30px 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .week-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .day {
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .day:last-child {
+            border-bottom: none;
+        }
+        
+        .day-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .task-category {
+            margin: 15px 0;
+        }
+        
+        .category-title {
+            font-weight: 600;
+            color: #4a90e2;
+            margin-bottom: 8px;
+        }
+        
+        .task-list {
+            margin-left: 20px;
+        }
+        
+        .task-item {
+            margin: 8px 0;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-left: 4px solid #4a90e2;
+            border-radius: 4px;
+        }
+        
+        .leetcode-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #ff6b35;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .leetcode-link:hover {
+            background: #e55a2b;
+        }
+        
+        .study-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .study-link:hover {
+            background: #218838;
+        }
+        
+        .practice-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #6f42c1;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .practice-link:hover {
+            background: #5a32a3;
+        }
+        
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .print-btn {
+                position: static;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">📄 Print/Save as PDF</button>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Week 2: Trees, Graphs, SQL + ML Theory</h1>
+            <p><strong>For Cognida Inc. & Top Tech Companies</strong></p>
+            <p>📅 June 4 - June 10, 2025</p>
+            <p>🎯 Focus: Trees, Graphs, Advanced SQL, ML Fundamentals</p>
+        </div>
+
+        <div class="week">
+            <div class="week-header">
+                WEEK 2: Trees, Graphs, SQL + ML Theory
+            </div>
+            
+            <div class="day">
+                <div class="day-title">Day 8 (June 4)</div>
+                <div class="task-category">
+                    <div class="category-title">🌳 DSA: Trees</div>
+                    <div class="task-item">
+                        DFS, BFS
+                        <a href="https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/" class="study-link" target="_blank">Study Trees</a>
+                        <a href="https://leetcode.com/tag/tree/" class="practice-link" target="_blank">Practice Trees</a>
+                        <a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" class="leetcode-link" target="_blank">#102</a>
+                        <a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/" class="leetcode-link" target="_blank">#104</a>
+                        <a href="https://leetcode.com/problems/balanced-binary-tree/" class="leetcode-link" target="_blank">#110</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">🗄️ SQL</div>
+                    <div class="task-item">
+                        Subqueries, IN/EXISTS
+                        <a href="https://www.w3schools.com/sql/sql_exists.asp" class="study-link" target="_blank">Study SQL</a>
+                        <a href="https://sqlbolt.com/" class="practice-link" target="_blank">Practice SQL</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">🤖 ML</div>
+                    <div class="task-item">
+                        Regression vs Classification; Accuracy, Precision, Recall
+                        <a href="https://www.coursera.org/learn/machine-learning" class="study-link" target="_blank">Study ML</a>
+                        <a href="https://www.kaggle.com/learn" class="practice-link" target="_blank">Practice ML</a>
+                    </div>
+                    <div class="task-item">Update project doc with confusion matrix from ANN HCR</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 9 (June 5)</div>
+                <div class="task-category">
+                    <div class="category-title">🌳 DSA: BST</div>
+                    <div class="task-item">
+                        Insert, Delete, Validate
+                        <a href="https://www.geeksforgeeks.org/binary-search-tree-data-structure/" class="study-link" target="_blank">Study BST</a>
+                        <a href="https://leetcode.com/tag/binary-search-tree/" class="practice-link" target="_blank">Practice BST</a>
+                        <a href="https://leetcode.com/problems/validate-binary-search-tree/" class="leetcode-link" target="_blank">#98</a>
+                        <a href="https://leetcode.com/problems/search-in-a-binary-search-tree/" class="leetcode-link" target="_blank">#700</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">🤖 ML</div>
+                    <div class="task-item">
+                        KNN – implement from scratch (optional)
+                        <a href="https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761" class="study-link" target="_blank">Study KNN</a>
+                        <a href="https://scikit-learn.org/stable/modules/neighbors.html" class="practice-link" target="_blank">Practice KNN</a>
+                    </div>
+                    <div class="task-item">Explain ANN model logic in simple terms in README</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 10 (June 6)</div>
+                <div class="task-category">
+                    <div class="category-title">📊 DSA: Graph</div>
+                    <div class="task-item">
+                        BFS, DFS, Cycle Detection
+                        <a href="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/" class="study-link" target="_blank">Study Graphs</a>
+                        <a href="https://leetcode.com/tag/graph/" class="practice-link" target="_blank">Practice Graphs</a>
+                        <a href="https://leetcode.com/problems/course-schedule/" class="leetcode-link" target="_blank">#207</a>
+                        <a href="https://leetcode.com/problems/clone-graph/" class="leetcode-link" target="_blank">#133</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">🗄️ SQL</div>
+                    <div class="task-item">
+                        Window functions (ROW_NUMBER, RANK)
+                        <a href="https://mode.com/sql-tutorial/sql-window-functions/" class="study-link" target="_blank">Study Window Functions</a>
+                        <a href="https://www.hackerrank.com/domains/sql" class="practice-link" target="_blank">Practice SQL</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">📂 Project</div>
+                    <div class="task-item">Describe AWS image-to-text pipeline in markdown</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 11 (June 7)</div>
+                <div class="task-category">
+                    <div class="category-title">📊 DSA: Graph Advanced</div>
+                    <div class="task-item">
+                        Topological Sort, Dijkstra
+                        <a href="https://www.geeksforgeeks.org/topological-sorting/" class="study-link" target="_blank">Study Advanced Graphs</a>
+                        <a href="https://leetcode.com/tag/topological-sort/" class="practice-link" target="_blank">Practice Advanced Graphs</a>
+                        <a href="https://leetcode.com/problems/course-schedule-ii/" class="leetcode-link" target="_blank">#210</a>
+                        <a href="https://leetcode.com/problems/network-delay-time/" class="leetcode-link" target="_blank">#743</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">☕ Java</div>
+                    <div class="task-item">
+                        JDBC + SQL Integration
+                        <a href="https://docs.oracle.com/javase/tutorial/jdbc/basics/" class="study-link" target="_blank">Study JDBC</a>
+                        <a href="https://www.codingbat.com/java" class="practice-link" target="_blank">Practice Java</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">🤖 ML</div>
+                    <div class="task-item">
+                        Overfitting, Bias-Variance Tradeoff
+                        <a href="https://machinelearningmastery.com/overfitting-and-underfitting-with-machine-learning-algorithms/" class="study-link" target="_blank">Study ML Concepts</a>
+                        <a href="https://www.kaggle.com/learn/intro-to-machine-learning" class="practice-link" target="_blank">Practice ML</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 12 (June 8)</div>
+                <div class="task-category">
+                    <div class="category-title">🔢 DSA</div>
+                    <div class="task-item">
+                        Mixed practice (3 problems)
+                        <a href="https://neetcode.io/" class="study-link" target="_blank">Study DSA</a>
+                        <a href="https://leetcode.com/problemset/all/" class="practice-link" target="_blank">Practice DSA</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">🤖 ML</div>
+                    <div class="task-item">
+                        TensorFlow – Layers, activation, loss, optimizer overview
+                        <a href="https://www.tensorflow.org/tutorials" class="study-link" target="_blank">Study TensorFlow</a>
+                        <a href="https://colab.research.google.com/notebooks/tensorflow_version.ipynb" class="practice-link" target="_blank">Practice TensorFlow</a>
+                    </div>
+                </div>
+                <div class="task-category">
+                    <div class="category-title">📂 Project</div>
+                    <div class="task-item">Refactor code in EasyLeave repo</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 13 (June 9)</div>
+                <div class="task-category">
+                    <div class="category-title">🎯 Mock Interview</div>
+                    <div class="task-item">
+                        1 LeetCode test (60 min)
+                        <a href="https://leetcode.com/contest/" class="practice-link" target="_blank">Mock Contests</a>
+                    </div>
+                    <div class="task-item">
+                        1 SQL case study from Mode
+                        <a href="https://mode.com/sql-tutorial/" class="practice-link" target="_blank">SQL Case Studies</a>
+                    </div>
+                    <div class="task-item">Project walk-through: HCR or License</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 14 (June 10)</div>
+                <div class="task-category">
+                    <div class="category-title">📝 Review Day</div>
+                    <div class="task-item">
+                        Practice STAR stories (automation tool, performance optimization)
+                        <a href="https://www.indeed.com/career-advice/interviewing/how-to-use-the-star-method" class="study-link" target="_blank">Study STAR Method</a>
+                    </div>
+                    <div class="task-item">
+                        Flashcards for ML metrics + SQL tricks
+                        <a href="https://quizlet.com/" class="practice-link" target="_blank">Create Flashcards</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white;">
+            <h3>🚀 Week 2 Complete!</h3>
+            <p>Focus on understanding concepts deeply and practicing consistently.</p>
+            <p><strong>Keep going! 💪</strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and interaction effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.leetcode-link, .study-link, .practice-link');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Add a small animation when clicking links
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

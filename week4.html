@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Technical Interview Study Plan - Cognida Inc.</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .week {
+            margin: 30px 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .week-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+        
+        .day {
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .day:last-child {
+            border-bottom: none;
+        }
+        
+        .day-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 8px 12px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .task-category {
+            margin: 15px 0;
+        }
+        
+        .category-title {
+            font-weight: 600;
+            color: #4a90e2;
+            margin-bottom: 8px;
+        }
+        
+        .task-list {
+            margin-left: 20px;
+        }
+        
+        .task-item {
+            margin: 8px 0;
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-left: 4px solid #4a90e2;
+            border-radius: 4px;
+        }
+        
+        .leetcode-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #ff6b35;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .leetcode-link:hover {
+            background: #e55a2b;
+        }
+        
+        .study-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .study-link:hover {
+            background: #218838;
+        }
+        
+        .practice-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #6610f2;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .practice-link:hover {
+            background: #5a0cc9;
+        }
+        
+        .sql-link {
+            display: inline-block;
+            margin: 2px 4px;
+            padding: 4px 8px;
+            background: #17a2b8;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .sql-link:hover {
+            background: #138496;
+        }
+        
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .print-btn {
+                position: static;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">📄 Print/Save as PDF</button>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Week 4 Technical Interview Study Plan</h1>
+            <p><strong>For Cognida Inc. & Top Tech Companies</strong></p>
+            <p>📅 June 18-24, 2025</p>
+            <p>🎯 Focus: Final Prep + Mock Interviews</p>
+        </div>
+
+        <div class="week">
+            <div class="week-header">
+                WEEK 4: Final Prep + Mock Interviews
+            </div>
+            
+            <div class="day">
+                <div class="day-title">Day 22 (June 18)</div>
+                <div class="task-category">
+                    <div class="category-title">🎯 Mock Coding Test</div>
+                    <div class="task-item">
+                        3 DSA problems (LeetCode)
+                        <a href="https://www.geeksforgeeks.org/data-structures/" class="study-link" target="_blank">Study DSA</a>
+                        <a href="https://leetcode.com/problemset/all/" class="practice-link" target="_blank">Practice</a>
+                    </div>
+                    <div class="task-item">
+                        1 SQL case + 1 design question
+                        <a href="https://www.w3schools.com/sql/" class="study-link" target="_blank">Study SQL</a>
+                        <a href="https://www.hackerrank.com/domains/sql" class="sql-link" target="_blank">SQL Practice</a>
+                        <a href="https://github.com/donnemartin/system-design-primer" class="study-link" target="_blank">System Design</a>
+                    </div>
+                    <div class="task-item">Review feedback</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 23 (June 19)</div>
+                <div class="task-category">
+                    <div class="category-title">🎯 Mock SQL + REST Round</div>
+                    <div class="task-item">
+                        Write 3 SQL queries
+                        <a href="https://www.w3schools.com/sql/" class="study-link" target="_blank">Study SQL</a>
+                        <a href="https://sqlbolt.com/" class="practice-link" target="_blank">SQL Practice</a>
+                        <a href="https://www.hackerrank.com/domains/sql" class="sql-link" target="_blank">HackerRank SQL</a>
+                    </div>
+                    <div class="task-item">
+                        Build and test 1 REST endpoint
+                        <a href="https://restfulapi.net/" class="study-link" target="_blank">Study REST</a>
+                        <a href="https://spring.io/guides/gs/rest-service/" class="practice-link" target="_blank">Spring Boot REST</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 24 (June 20)</div>
+                <div class="task-category">
+                    <div class="category-title">🎯 Project Mock Round</div>
+                    <div class="task-item">Present AWS project using STAR format</div>
+                    <div class="task-item">Answer deployment + design questions</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 25 (June 21)</div>
+                <div class="task-category">
+                    <div class="category-title">🤖 ML Recap</div>
+                    <div class="task-item">
+                        ANN architecture explanation
+                        <a href="https://www.deeplearningbook.org/" class="study-link" target="_blank">Study ML</a>
+                        <a href="https://www.kaggle.com/learn" class="practice-link" target="_blank">Kaggle Learn</a>
+                    </div>
+                    <div class="task-item">
+                        Compare models (KNN vs SVM vs ANN)
+                        <a href="https://scikit-learn.org/stable/user_guide.html" class="study-link" target="_blank">Scikit-Learn</a>
+                        <a href="https://www.coursera.org/learn/machine-learning" class="practice-link" target="_blank">ML Course</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 26 (June 22)</div>
+                <div class="task-category">
+                    <div class="category-title">🎯 Mock Full Technical Interview</div>
+                    <div class="task-item">
+                        Java + ML + System Design + Project
+                        <a href="https://docs.oracle.com/javase/tutorial/" class="study-link" target="_blank">Java Tutorial</a>
+                        <a href="https://www.hackerrank.com/domains/java" class="practice-link" target="_blank">Java Practice</a>
+                        <a href="https://github.com/donnemartin/system-design-primer" class="study-link" target="_blank">System Design</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 27 (June 23)</div>
+                <div class="task-category">
+                    <div class="category-title">✨ Final Polish</div>
+                    <div class="task-item">Resume update</div>
+                    <div class="task-item">GitHub descriptions</div>
+                    <div class="task-item">Interview checklist + questions</div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-title">Day 28 (June 24)</div>
+                <div class="task-category">
+                    <div class="category-title">😌 Light Review + Rest</div>
+                    <div class="task-item">
+                        Practice 2 LeetCode Easy
+                        <a href="https://leetcode.com/problemset/all/?difficulty=Easy" class="practice-link" target="_blank">Easy Problems</a>
+                    </div>
+                    <div class="task-item">Scan STAR stories</div>
+                    <div class="task-item">Get good rest 😴</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 10px; color: white;">
+            <h3>🚀 Ready to Ace Your Interview!</h3>
+            <p>Follow this plan consistently and you'll be well-prepared for technical interviews at top companies.</p>
+            <p><strong>Good luck! 💪</strong></p>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and interaction effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('.leetcode-link, .study-link, .practice-link, .sql-link');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Add a small animation when clicking links
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
