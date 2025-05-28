@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Interview Study Plan - Complete Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 15px;
+            color: white;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            margin: 15px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .intro-section {
+            text-align: center;
+            margin: 30px 0;
+            padding: 25px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-radius: 15px;
+        }
+        
+        .intro-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .intro-section p {
+            color: #555;
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .plan-card {
+            background: white;
+            border: 3px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-8px);
+            border-color: #667eea;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .plan-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .plan-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #333;
+            margin: 15px 0;
+        }
+        
+        .plan-description {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        
+        .plan-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .plan-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .python-card {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #306998 0%, #FFD43B 100%);
+            color: white;
+            border: none;
+        }
+        
+        .python-card .plan-title {
+            color: white;
+        }
+        
+        .python-card .plan-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .python-card .plan-link {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .python-card .plan-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .weeks-section {
+            margin: 40px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
+        }
+        
+        .footer h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.8em;
+        }
+        
+        .footer p {
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 2.2em;
+            }
+            .plans-grid {
+                grid-template-columns: 1fr;
+            }
+            .python-card {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Technical Interview Mastery</h1>
+            <p><strong>Complete Study Plan for Tech Interview</strong></p>
+            <p>📅 4-Week Structured Program + Python Deep Dive</p>
+        </div>
+
+        <div class="intro-section">
+            <h2>🎯 Your Path to Interview Success</h2>
+            <p>Master Data Structures & Algorithms, strengthen your programming skills, and build confidence for technical interviews at top companies. This comprehensive study plan covers everything you need in 4 focused weeks.</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Weeks of Content</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">Practice Problems</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Key Topics</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">∞</span>
+                <span class="stat-label">Career Growth</span>
+            </div>
+        </div>
+
+        <div class="plans-grid">
+            <div class="plan-card python-card">
+                <div class="plan-icon">🐍</div>
+                <div class="plan-title">Python Complete Guide</div>
+                <div class="plan-description">
+                    Comprehensive Python reference covering fundamentals, data structures, OOP, advanced concepts, and data science libraries. Perfect for Python-focused interviews and general programming mastery.
+                </div>
+                <a href="pythonPlan.html" class="plan-link">Start Python Journey →</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">📚 4-Week Study Program</h2>
+
+        <div class="plans-grid">
+            <div class="plan-card">
+                <div class="plan-icon">📅</div>
+                <div class="plan-title">Week 1: Foundations</div>
+                <div class="plan-description">
+                    Build your foundation with Arrays, Strings, Recursion, and core Java concepts. Set up your projects and establish good coding practices.
+                </div>
+                <a href="week1.html" class="plan-link">Begin Week 1 →</a>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-icon">🔥</div>
+                <div class="plan-title">Week 2: Core DSA</div>
+                <div class="plan-description">
+                    Master Trees, Graphs, Dynamic Programming basics, and system design fundamentals. Tackle medium-level problems with confidence.
+                </div>
+                <a href="week2.html" class="plan-link">Start Week 2 →</a>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-icon">⚡</div>
+                <div class="plan-title">Week 3: Advanced Topics</div>
+                <div class="plan-description">
+                    Advanced DP, Graph algorithms, System Design deep dive, and behavioral interview preparation. Polish your technical storytelling.
+                </div>
+                <a href="week3.html" class="plan-link">Enter Week 3 →</a>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-icon">🎯</div>
+                <div class="plan-title">Week 4: Interview Ready</div>
+                <div class="plan-description">
+                    Mock interviews, final preparations, company-specific practice, and last-minute optimizations. You're ready to ace any interview!
+                </div>
+                <a href="week4.html" class="plan-link">Final Week →</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>🏆 Ready to Land Your Dream Job?</h3>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth animations and interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate cards on scroll
+            const cards = document.querySelectorAll('.plan-card');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                observer.observe(card);
+            });
+            
+            // Add click animation to links
+            const links = document.querySelectorAll('.plan-link');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    this.style.transform = 'translateY(-2px) scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = 'translateY(-2px) scale(1)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
